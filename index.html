@@ -84,6 +84,24 @@
                 document.querySelector("body").appendChild(section)
             }
         }
+
+        const FINDUS = [
+            ["Youtube", "https://youtube.com/channel/UC8C7vnEfOu9iBsVyLgg4_XQ"]
+        ]
+
+        let contact = document.createElement("section")
+        let h2 = document.createElement("h2")
+        h2.innerHTML = "Find us"
+        contact.appendChild(h2)
+        for(let i = 0; i < FINDUS.length; i++){
+            let btn = document.createElement("button")
+            btn.innerHTML = FINDUS[i][0]
+            btn.addEventListener("click", function(){window.open(FINDUS[i][1])})
+            contact.appendChild(btn)
+        }
+        contact.style.paddingTop = "10px"
+        document.querySelector("body").appendChild(contact)
+
     </script>
 </body>
 </html>
